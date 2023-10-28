@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Sign-up on JoSAA portal</title>
+<style>
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+</style>
+</head>
+<body bgcolor = #ffffcc>
+<h1 align = "center" style = "line-height = 30px; font-family:'Calibri';font-size:46">Joint Seat Allocation Authority
+<img height = 135 width = 250 align = "left" src = "D://Desktop/josaapic.png">
+<img height = 100 width = 200 align = "right" src = "D://Desktop/ministry.png"> 
+<h2 align = "center" style = "font-family:'Times New Roman';font-size:20">संयुक्त सीट आवंटन प्राधिकरण
+<hr width = 100%>
+
+<p style="line-height= 20px; font-family:'Times New Roman'; font-size:24px; color:green" align="left"><i>Fill in the required details</i></p>
+<p align = "center">Your full name: 
+<input type="text" id="name" ></p>
+<p align="center">(As appearing on 12th board mark sheet)</p><br><br>
+<p align = "center">Gender:
+<input type="radio" id="g1" name="a2" value="m3">
+<label align="center" for="write">Male</label>
+<input type="radio" id="g1" name="a2" value="f3">
+<label align="center" for="write">Female</label>
+<input type="radio" id="g1" name="a2" value="mf3">
+<label align="center" for="write">Other</label>
+</p><br>
+
+<p align="center">JEE Advanced (2023) Roll no.
+<input type = "text" id = "rollno"><br><br></p>
+<p align="center">Date of birth:
+<input type="date" id = "dob"><br><br></p>
+
+<form>
+Category: 
+  <select id="cat">
+    <option value="OPEN">OPEN</option>
+    <option value="OBC-NCL">OBC-NCL</option>
+    <option value="SC/ST">SC/ST</option>
+    <option value="OPEN PWD">OPEN PWD</option>
+ <option value="EWS">EWS</option>
+  </select>
+</form>
+<br><br><br>
+<form>
+Seat Pool: 
+  <select id="pool">
+    <option value="GEN">GEN</option>
+    <option value="FEMALE ONLY">FEMALE ONLY</option>
+  </select>
+</form><br>
+
+<p align = "center">Do you have any difficulty in vision?
+<input type="radio" id="write1" name="a1" value="no2">
+<label align="center" for="write">Yes</label>
+<input type="radio" id="write1" name = "a1"value="no1">
+<label align="center" for="write">No</label><br><br>
+<p align = "center">Do you have any difficulty in reading and writing?
+<input type="radio" id="read1" name="a3" value="yes2">
+<label align="center" for="write">Yes</label>
+<input type="radio" id="read1" name="a3" value="no2">
+<label align="center" for="write">No</label><br><br>
+<hr width = 100%>
+<p align="left" style="font-size:20px; color:green">Communication details</p>
+
+<p>Current residential address:
+<textarea id="addline1" name="add" rows ="3" cols="40" value="addline1p"></textarea></p><br>
+
+<p>Permanent residential address:
+<textarea id="addline2" name="add" rows ="3" cols="40" value="addline2p"></textarea></p><br>
+<p>Mobile no.:<input type="text" id="mob"></p><br>
+<p>E-mail id:<textarea rows ="1" cols="40" id="mail" value="mail"></textarea></p><br></p>
+<hr width = 100%>
+<p align="left" style="font-size:20px; color:green">Qualifying examination details</p>
+
+<form>
+Year of first passing qualifying examination: 
+  <select id="year">
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+  </select>
+</form><br>
+<label align = "center">State of passing qualifying exam</label>
+<input type = "text" id="state"></input><br><br><br>
+<hr width = 100%>
+<p align="left" style="color:green">Create login credentials</p><br><br>
+<label align="left">Create password: 
+<input type="text" id="pwd"></label><br><br>
+<label align="left">Confirm password: 
+<input type="text" id="pwdc"></label><br>
+<hr width=100%>
+
+<p style="color:red">Declaration:</p>
+<ul type ="circle" align="left">
+<li>The information furnished by me is completely correct</li>
+<li>If at any stage the information is found to be incorrect, I am liable to be penalized, which may include deregistration from JoSAA process</li>
+</ul><br>
+
+<input type = "checkbox" id="cb" value="cbc">
+<label>I accept the terms and conditions</label><br><br>
+<button type="button" onclick="f1()">Submit</button>
+
+
+<script>
+
+function f1(){
+var a = document.getElementById("name").value;
+var b = document.getElementById("g1").value;
+var c = document.getElementById("rollno").value;
+var d = document.getElementById("dob").value;
+var e = document.getElementById("cat").value;
+var f = document.getElementById("pool").value;
+var g = document.getElementById("write1").value;
+var h = document.getElementById("read1").value;
+var i = document.getElementById("addline1").value;
+var j = document.getElementById("addline2").value;
+var k = document.getElementById("mob").value;
+var l = document.getElementById("mail").value;
+var m = document.getElementById("year").value;
+var n = document.getElementById("state").value;
+var o = document.getElementById("pwd").value;
+var p = document.getElementById("pwdc").value;
+
+
+if (a != "" && b!= "" && c!= "" && d!= "" && e!= "" && f!= "" && g!= "" && h!= "" && i!= "" && j!= "" && k!= "" && l!= "" && m!= "" && n!= "" && o!= "" && p!= "" && o === p && document.getElementById("cb").checked===true )
+{
+alert("Are you sure to submit? Once submitted, cannot be changed");
+window.location = 'D://Desktop/JoSAA portal page3.html';
+}
+else{
+alert("Please fill all the required fields correctly.");
+}
+}
+</script>
+</body>
+</html>
